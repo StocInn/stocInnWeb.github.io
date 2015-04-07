@@ -14364,7 +14364,7 @@ for(var index = 0;index<funnelData.length;index++)
 
 				 var m = d3.mouse(this);
 				 console.log(m);
-				 d3.select(this).select("title").text(yScale(m[1]));
+				 d3.select(this).select("title").text(yScale(m[1]));  //bvnghngh
 			}
 			
 			var largestStringLngth=0;
