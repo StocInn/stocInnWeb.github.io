@@ -2,27 +2,48 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>StocChart</title>
-<link rel="shortcut icon"  href="images/favicon.ico"/>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StocCharts</title>
 <!-- Latest compiled and minified CSS -->
+<link rel="shortcut icon"  href="img/favicon.ico"/>
 <link rel="stylesheet" href="css/bootstrap.min.css">
 
 <!-- Optional theme -->
 <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 <!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/animation.js"></script> 
+<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100
+      }
+    );
+    wow.init();
+    /*document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section-purple animation fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };*/
+  </script>
 
 </head>
 
-<body >
-<header >
-  <div class="container">
-   <nav class="navbar navbar-default">
+<body>
+<header>
+<div class="container">
+
+      <!--  navbar start -->
+      <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
             <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
@@ -31,39 +52,32 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-             <a href="index.html" class="navbar-brand"> <img src="images/logo.png" alt="StocChart"> </a>
+           <a href="index.html" class="navbar-brand"><img src="img/stocChart-logo.png" alt="StocCharts"/></a>
           </div>
           <div class="navbar-collapse collapse" id="navbar">
-            <ul class="nav navbar-nav" >
             
-        <li><a href="index.html"> Home </a></li>
-        <li> <a href="pricing.html" class="active">pricing</a></li>
-        <li> <a href="team.html">Team</a></li>
-        <li><a href="aspects.html">Aspects</a></li>
-        <li> <a href="documentation.html"> Documentation</a> </li>
-     
-              <li class="dropdown">
-                <a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">Products <span class="caret"></span></a>
-                <ul role="menu" class="dropdown-menu">
-                  <li><a href="#">GenCharts</a></li>
-                  <li><a href="#">Capital market tools and services</a></li>
-                  <li><a href="#">StocUI</a></li>
-                  
-                </ul>
-              </li>
+            <ul class="nav navbar-nav navbar-right">
+              <li ><a href="index.html"> Home </a></li>
+              <li ><a href="features.html">Features </a></li>
+              <li><a href="dashboard.html">  Demo     </a></li>
+            <!--  <li><a href="#"> Business model   </a></li>
+              <li class="active"><a href="#"> Pricing  </a></li> -->
             </ul>
-      <div class="gallery pull-right"> <a href="http://www.stocinn.com/stoccharts/" target="_blank"> <span>GALLERY <i class="fa fa-chevron-right"></i> </span></a></div>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
-   
-  </div>
-</header>
-<section class="midddleContent">
-  <h1 class="text-center" >Our Package Plans</h1>
-  <p class="text-center">StocInnChart gives 100s of charts, unlimited code &amp; top grade  FREE Support<br>
-    Upgrade to Premium and get even more</p>
-  <div class="chartPriceContainor">
+
+     <!--  navbar end -->
+
+    </div></header>
+<section class="pricing">
+<div class="container" style="position:relative;">
+<h2>Our Package Plans </h2>
+<h3>StocInnChart gives 100s of charts, unlimited code &amp;  top grade FREE Support<br>
+
+Upgrade to Premium and get even more</h3>
+
+ <div class="chartPriceContainor">
     <div class="table-row" >
       <div class="cell none"></div>
       <div class="cell none  borderLeftRadius header">Basic Plan <br>
@@ -159,15 +173,15 @@
        
 
         <input type="radio" value="basic"  name="addname" >
-        <div class="btnBuyNow none" id="basicPlan"> <a href="#"><img src="images/buy-now-btn.png" alt=""> </a></div>
+        <div class="btnBuyNow none" id="basicPlan"> <a href="#"><img src="img/buy-now-btn.png" alt=""> </a></div>
       </div>
       <div class="cell">
         <input type="radio" value="Premium" name="addname">
-        <div class="btnBuyNow none" id="premiumPlan" ><a href="#"><img src="images/buy-now-btn.png" alt=""> </a></div>
+        <div class="btnBuyNow none" id="premiumPlan" ><a href="#"><img src="img/buy-now-btn.png" alt=""> </a></div>
       </div>
       <div class="cell">
         <input type="radio" value="Whitelabeling" name="addname">
-        <div class="btnBuyNow none" id="whiteLabel" ><a href="#"><img src="images/buy-now-btn.png" alt=""> </a></div>
+        <div class="btnBuyNow none" id="whiteLabel" ><a href="#"><img src="img/buy-now-btn.png" alt=""> </a></div>
       </div>
     </div>
   </div>
@@ -211,51 +225,11 @@
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-xs-3">
-      <div class="logoTruste"><img src="images/logo-Truste.png" alt="Truste"/></div>
-    </div>
-    <div class="col-xs-4">
-      <div class="safeShop">
-        <div class="row">
-          <div class="col-xs-8 safe">100% SAFE<br>
-            <span>Secure Shopping</span> </div>
-          <div class="col-xs-4"><img src="images/secure-shopping-icon.png" alt="#"/></div>
-        </div>
-        <p>StocInn is 100% committed to online safely</p>
-      </div>
-    </div>
-    <div class="col-xs-5">
-      <div class="creditCards">
-        <h3>We accept all of the following credit cards</h3>
-        <ul>
-          <li><img src="images/visa-card.png" alt="Visa"/></li>
-          <li><img src="images/master-card.png" alt="Master Card"/></li>
-          <li><img src="images/american-express-card.png" alt="American Express Card"/></li>
-          <li><img src="images/discover-card.png" alt="Discover Card"/></li>
-        </ul>
-        <div class="yearlyPlan">Buy Unlimited Yearly Plan and Save !
-          <div class="btnBuy"> <a href="#" class="btnBuy">Buy Now <i class="fa fa-angle-right"></i></a> </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<footer>
-  <div class="container">
-    <div  class="copyright ">Product of <a target="_blank" href="http://paxcel.net/">Paxcel Labs</a><br>
-      Copyright © 2015 Paxcel Technologies (p) Ltd </div>
-    <div class="socialLink">
-      <ul>
-        <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
-        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
-        <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
-        <li> <a href="#"><i class="fa fa-youtube"></i></a></li>
-      </ul>
-    </div>
-  </div>
-</footer>
+  
 
+ </div>
+</section>
+   
 <script type="text/javascript">
 
         $(document).ready(function(){
@@ -290,7 +264,58 @@
             });
 
         });
+		
+		
+$(function() {
+$('.dropdown').hover(function() { 
+    $('.dropdown-menu').show(); 
+}, function() { 
+    $('.dropdown-menu').hide(); 
+});
+});
+</script>
 
-    </script>
+   <footer>
+      
+   <!--   <div class="container">
+      <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-12">
+      <ul class="footerLink animated fadeInLeft"> 
+      <li> <a href="#">About</a></li>
+      <li> <a href="#">Blog </a></li>
+      <li> <a href="#">Contact</a></li>
+      <li> <a href="#">Terms </a></li></ul>
+      
+       <ul class="footerLink animated fadeInLeft"> 
+      <li> <a href="#">Knowledge Base</a></li>
+      <li> <a href="#">Theme Support </a></li>
+      <li> <a href="#">Support Policy</a></li>
+      <li> <a href="#">Customization </a></li></ul>
+      
+      
+      <ul class="footerLink animated fadeInLeft">
+                            <li><a href="#"><i class="fa fa-twitter twitter " ></i> Twitter</a></li>
+                            <li><a href="#"><i class="fa fa-facebook facebook "></i> Facebook</a></li>
+                            <li><a href="#" ><i class="fa fa-linkedin linkedin "></i> Linkedin</a></li>
+                            <li><a href="#"><i class="fa fa-google-plus googlePls "></i> Google+</a></li>
+                        </ul>
+                        
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12 "><form >
+<div class="form-group col-xs-12">Subscribe to get early access to new charts,
+discounts and brief updates about our collection. </div>
+				<div class="mc-field-group form-group col-xs-9">
+					<input type="email" placeholder="Enter Your Email"  class="required email form-control fieldStyle" name="EMAIL" value="">
+				
+				
+				</div>
+
+					<input type="submit" class=" btn btn-success col-xs-3 btnStyle"  name="subscribe" value="Subscribe!">
+				</form></div>
+      </div></div> -->
+      
+      
+      <div class="bottom"><div class="container"> <div class="copyright">Copyright © 2015 Paxcel Technologies (p) Ltd </div> </</div></div></footer>
+
 </body>
 </html>
