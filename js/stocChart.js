@@ -14378,6 +14378,7 @@ for(var index = 0;index<funnelData.length;index++)
 			xAxis.tickValues(tickController.getXTickArray(0,(xAxisTicksArray.length),largestStringLngth, (width-(startX+leftBarMargin))));
 			var xAxisRef = svgContainer.append("g")
                     .attr("class", "axis")
+					.attr('fill',"none")
                     .attr("transform", "translate("+(0)+"," + (scaleHeight) + ")")
                     .call(xAxis);
 					
